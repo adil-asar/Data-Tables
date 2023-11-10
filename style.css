@@ -43,6 +43,9 @@
 
 .table-col, .table-head {
     padding: 8px;
-    text-align: left;
+    text-align: center;
 }
 
+.table-head{
+    text-align: center !important;
+}
