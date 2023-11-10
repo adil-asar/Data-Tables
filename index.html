@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Data Tables</title>
     <link rel="stylesheet" href="style.css">
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"
-    />
-    
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"/>
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
-    <!-- <script src="index.js"></script> -->
+  
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css" />
+  <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+
+
   </head>
   <body>
     <div class="main-box">
         
-        <table id="example" class="display" width="100%">
-        </table>
+        <table id="example" class="display responsive nowrap" style="width:100%"></table>
 
 </div>
 
@@ -63,13 +64,15 @@
     ['Martena Mccray', 'Post-Sales support', 'Edinburgh', '8240', '2011/03/09', '$324,050'],
     ['Unity Butler', 'Marketing Designer', 'San Francisco', '5384', '2009/12/09', '$85,675'],
 ];
- 
+
+
 new DataTable('#example', {
+  responsive: true,
     columns: [
         { title: 'Name' },
         { title: 'Position' },
         { title: 'Office' },
-        { title: 'Extn.' },
+        // { title: 'Extn.' },
         { title: 'Start date' },
         { title: 'Salary' }
     ],
